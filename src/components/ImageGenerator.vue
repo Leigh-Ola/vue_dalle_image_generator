@@ -21,7 +21,6 @@
 </template>
 
 <script>
-const apiKey = process.env.VUE_APP_OPENAI_API_KEY;
 export default {
     name: "ImageGenerator",
     props: {
@@ -66,18 +65,9 @@ export default {
             // real
             {
                 // fetch request with header
-                await fetch("https://api.openai.com/v1/images/generations", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${apiKey}`,
-                    },
-                    body: JSON.stringify({
-                        prompt: prompt,
-                        n: 1,
-                        size: "256x256",
-                    })
-                }).then(res => res.json())
+                // /.netlify/functions/generate?prompt=a%20real%20lion
+                await fetch(`/.netlify/functions/generate?prompt=${prompt}`)
+                .then(res => res.json())
                 .then(data => {
                     this.loading = false;
                     this.prompt = "";
