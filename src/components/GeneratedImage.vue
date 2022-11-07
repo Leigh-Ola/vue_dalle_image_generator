@@ -32,8 +32,11 @@ export default {
     methods:{
         download(){
             var url= this.image.url;
-            console.log("Downloading", url);    
-            window.open(url, 'Download');
+            window.location.assign(url);
+            // var link = document.createElement('a');
+            // link.href = url;
+            // link.download = url.substr(url.lastIndexOf('/') + 1);
+            // link.click();
         }
     }
 };
