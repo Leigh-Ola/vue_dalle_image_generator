@@ -1,7 +1,9 @@
 <template>
   <div class="img-box" v-on:mouseover.stop="show_alt = true">
     <img :src="image.url" :alt="image.prompt"  />
-    <div class="alt-text" :class="{'visible': show_alt}">
+    <div class="alt-text" :class="{'visible': show_alt }">
+        <!-- <font-awesome-icon @click="download" class="icon" icon="fa-solid fa-file-arrow-down" /> -->
+        <font-awesome-icon @click="download" class="icon" icon="fa-solid fa-download" />
         {{image.prompt}}
     </div>
   </div>
@@ -27,6 +29,13 @@ export default {
             this.show_alt = false;
         }
     },
+    methods:{
+        download(){
+            var url= this.image.url;
+            console.log("Downloading", url);    
+            window.open(url, 'Download');
+        }
+    }
 };
 </script>
 
@@ -66,5 +75,10 @@ export default {
 }
 .img-box .alt-text.visible{
     opacity: 1;
+}
+.alt-text .icon{
+    position: absolute; right: 5px; top: 5px; display: inline;
+    font-size: 2.5em;
+    padding: 5px; 
 }
 </style>
