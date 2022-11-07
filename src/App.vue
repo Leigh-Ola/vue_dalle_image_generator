@@ -5,6 +5,15 @@
     <h1>DallE Image Generator</h1>
   </nav>
   <router-view />
+  <footer>
+    <a href="https://www.linkedin.com/in/leigh-ola">
+      <font-awesome-icon icon="fa-brands fa-linkedin" />
+    </a>
+    <a href="https://github.com/Leigh-Ola">
+      <font-awesome-icon icon="fa-brands fa-github" />
+    </a>
+  </footer>
+
 </template>
 
 <style>
@@ -47,5 +56,21 @@ nav {
   background: -webkit-linear-gradient(0deg, var(--color-primary), var(--color-primary-alt), var(--color-secondary-alt), var(--color-secondary-alt-dark));
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+</style>
+
+<style scoped>
+footer{
+  width: 100%; padding: 10px 0px; transition: all 0.3s ease;
+  display: flex; justify-content: space-evenly; align-items: center;
+  background: #031550; color: white; position: relative;
+  /* gradient background */
+  background: -webkit-linear-gradient(0deg, var(--color-primary), var(--color-primary-alt), var(--color-secondary-alt), var(--color-secondary-alt-dark));
+}
+footer > *{
+  color: white !important;
+}
+footer > *:hover{
+  transform: scale(1.1); color: gold !important;
 }
 </style>

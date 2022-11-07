@@ -1,8 +1,5 @@
 <template>
   <div class="home" v-on:mouseover.stop="hover+=1">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-
-    <!-- <GeneratedImage :image="image" /> -->
     <ImageGenerator :hover="hover" v-on:image-generated="newImage" />
     <GeneratedImage v-for="image in images" v-bind:key="image.timestamp" :image="image" :hover="hover" />
   </div>
