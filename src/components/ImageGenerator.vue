@@ -21,7 +21,7 @@
 </template>
 
 <script>
-const apiKey = "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"
+const apiKey = process.env.VUE_APP_OPENAI_API_KEY;
 export default {
     name: "ImageGenerator",
     props: {
@@ -88,6 +88,7 @@ export default {
                     this.$emit("imageGenerated", {url, prompt});
                 })
                 .catch(err => {
+                    this.loading = false;
                     this.error = "Error generating image";
                     console.log(err);
                 });

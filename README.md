@@ -14,3 +14,5 @@ npm run serve
 ```
 npm run build
 ```
+----------
+> Get OpenAI API keys [here](https://beta.openai.com/account/api-keys)
