@@ -37,6 +37,12 @@ export default {
     flex-shrink: 0; margin: 10px; padding: 8px;
     box-sizing: border-box; transition: all 0.3s ease;
 }
+/* responsive */
+@media screen and (max-width: 600px){
+    .img-box{
+        width: 350px; height: 350px;
+    }
+}
 .img-box:hover{
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
 }

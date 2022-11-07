@@ -4,7 +4,7 @@
         <div class="prompt-box" :class="{'visible': prompt_open}">
             <textarea
                 class="prompt"
-                placeholder="Enter a prompt"
+                placeholder="Describe the image you'd like to generate"
                 v-model="prompt"
             ></textarea>
             <span class="error" v-show="error">{{error}}</span>
