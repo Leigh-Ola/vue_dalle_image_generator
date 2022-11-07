@@ -38,10 +38,10 @@ exports.handler = async (event, context) => {
         });
     } catch (error) {
       console.log(error);
-      return {
+      resolve({
         statusCode: 500,
         body: JSON.stringify({ error: "Failed fetching data" }),
-      };
+      });
     }
   });
 };
