@@ -5,17 +5,15 @@ Deployed on [Netlify](https://dall-e.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/09ddfa2c-2c1b-4411-b5c7-b9e46b442725/deploy-status)](https://app.netlify.com/sites/dall-e/deploys)
 ## Project setup
 ```
-npm install
+npm install netlify-cli -g
+netlify login
+netlify init
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+netlify dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 ----------
 > Get OpenAI API keys [here](https://beta.openai.com/account/api-keys)

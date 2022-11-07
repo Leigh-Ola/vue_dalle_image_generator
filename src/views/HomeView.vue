@@ -4,7 +4,7 @@
 
     <!-- <GeneratedImage :image="image" /> -->
     <ImageGenerator :hover="hover" v-on:image-generated="newImage" />
-    <GeneratedImage v-for="image in images" v-bind:key="image.timestamp" :image="image" />
+    <GeneratedImage v-for="image in images" v-bind:key="image.timestamp" :image="image" :hover="hover" />
   </div>
 </template>
 

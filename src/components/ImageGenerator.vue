@@ -44,9 +44,13 @@ export default {
         async generateImage() {
             if(this.loading) return;
             this.error = "";
-            let prompt = this.prompt;
+            let prompt = String(this.prompt).trim();
             if(!prompt){
                 this.error = "Please enter a prompt";
+                return;
+            }
+            if(prompt.length > 256){
+                this.error = "Prompt must be less than 256 characters";
                 return;
             }
             this.loading = true;
